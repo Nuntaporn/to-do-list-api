@@ -8,9 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.api.beans.AddingTasks;
 
+/**
+ * The Class TaskDeleteController.
+ */
 @RestController
 public class TaskDeleteController {
 	
+	/**
+	 * Delete task record.
+	 *
+	 * @param tname the task name
+	 * @return the string
+	 */
 	@RequestMapping(method = RequestMethod.DELETE, value="/delete/task/{tname}")
 	
 	@ResponseBody

@@ -11,9 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.api.beans.AddingTasks;
 import com.example.api.beans.Task;
 
+/**
+ * The Class FoundTaskController.
+ */
 @RestController
 public class FoundTaskController {
 	
+	/**
+	 * Gets the task by task name.
+	 *
+	 * @param taskName the task name
+	 * @return the task
+	 */
 	@RequestMapping(method = RequestMethod.GET, value="/task/{taskName}")
 	  @ResponseBody
 	  public List<Task> getTask(@PathVariable("taskName") String taskName) {

@@ -9,9 +9,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.api.beans.AddingTasks;
 import com.example.api.beans.Task;
 
+/**
+ * The Class SetTaskStatusController.
+ */
 @RestController
 public class SetTaskStatusController {
 	
+/**
+ * Update task record.
+ *
+ * @param task the task
+ * @return the string
+ */
 @RequestMapping(method = RequestMethod.PUT, value="/setstatus/task")
 	
 	@ResponseBody

@@ -10,9 +10,18 @@ import com.example.api.beans.AddingTasks;
 import com.example.api.beans.AddingTasksReply;
 import com.example.api.beans.Task;
 
+/**
+ * The Class AddingTasksController.
+ */
 @RestController
 public class AddingTasksController {
 	
+	/**
+	 * Adding task.
+	 *
+	 * @param task the task
+	 * @return the adding tasks reply
+	 */
 	@RequestMapping(method = RequestMethod.POST, value="/Adding/task")
 	
 	  @ResponseBody
@@ -20,7 +29,8 @@ public class AddingTasksController {
 			System.out.println("In AddingTask");
 			AddingTasksReply addReply = new AddingTasksReply();           
 	        AddingTasks.getInstance().add(task);
-	        //We are setting the below value just to reply a message back to the caller
+	        
+	        //setting the below value just to reply a message back to the caller
 	        addReply.setTaskName(task.getTaskName());
 	        addReply.setTaskDetail(task.getTaskDetail());
 	        addReply.setTaskStatus(task.getTaskStatus());
