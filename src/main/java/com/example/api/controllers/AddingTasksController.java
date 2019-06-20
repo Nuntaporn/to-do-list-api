@@ -17,7 +17,7 @@ public class AddingTasksController {
 	
 	  @ResponseBody
 	  public AddingTasksReply addingTask(@RequestBody Task task) {
-			System.out.println("In registerStudent");
+			System.out.println("In AddingTask");
 			AddingTasksReply addReply = new AddingTasksReply();           
 	        AddingTasks.getInstance().add(task);
 	        //We are setting the below value just to reply a message back to the caller

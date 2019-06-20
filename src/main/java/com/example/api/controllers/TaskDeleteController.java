@@ -15,7 +15,7 @@ public class TaskDeleteController {
 	
 	@ResponseBody
 	public String deleteTaskRecord(@PathVariable("tname") String tname) {
-		System.out.println("In deleteStudentRecord");   
+		System.out.println("In deleteTask");   
 	    return AddingTasks.getInstance().deleteTask(tname);
 	}
 

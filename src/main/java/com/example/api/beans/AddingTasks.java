@@ -27,7 +27,7 @@ private List<Task> taskRecords;
 		taskRecords.add(tak);
 	}
 	
-	public String upDateTask(Task tak) {
+	public String updateTask(Task tak) {
 		for(int i=0; i<taskRecords.size(); i++)
 		        {
 			Task task = taskRecords.get(i);
@@ -52,17 +52,31 @@ private List<Task> taskRecords;
 	}
 	
 	public List<Task> foundTask(String taskName) {
+		List<Task> foundTask = new ArrayList<Task>();
 		for(int i=0; i<taskRecords.size(); i++) {
 			Task task = taskRecords.get(i);
 				if(task.getTaskName().equals(taskName)) {
-					return (List<Task>) task;
+					foundTask.add(task);
+					return foundTask;
 				}
 		}
-		return taskRecords;
+		return foundTask;
 	}
 	
 	public List<Task> getTaskRecords() {
 	    return taskRecords;
+	}
+	
+	public String setStatus(Task tak) {
+		for(int i=0; i<taskRecords.size(); i++)
+		        {
+			Task task = taskRecords.get(i);
+		            if(task.getTaskName().equals(tak.getTaskName())) {
+		            	taskRecords.set(i, tak);//Set Task Status record
+		              return "Set Task Status successful";
+		            }
+		        }
+		return "Set Task Status un-successful";
 	}
 
 

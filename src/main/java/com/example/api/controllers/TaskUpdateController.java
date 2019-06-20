@@ -16,8 +16,8 @@ public class TaskUpdateController {
 	
 	@ResponseBody
 	public String updateTaskRecord(@RequestBody Task task) {
-		System.out.println("In updateStudentRecord");   
-	    return AddingTasks.getInstance().upDateTask(task);
+		System.out.println("In updateTask");   
+	    return AddingTasks.getInstance().updateTask(task);
 	}
 
 }
